@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Login:Web exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/Login_Web_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="Login/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Login" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="jstl" />
+          <element id="library" level="project" name="standard" />
+          <element id="library" level="project" name="mysql-connector-java-5.1.47" />
+          <element id="library" level="project" name="junit-4.12-sources" />
+          <element id="library" level="project" name="commons-fileupload-1.2.1" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
