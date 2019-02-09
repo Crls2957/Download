@@ -61,20 +61,20 @@ public class login extends HttpServlet {
                 resp.addCookie(nameCookie);
                 resp.addCookie(passwdCookie);
                 req.getSession().setAttribute("user",name);
-                req.setAttribute("flag","登录成功");
-                req.setAttribute("name",name);
+                req.getSession().setAttribute("flag","登录成功");
+                req.getSession().setAttribute("name",name);
                 req.getRequestDispatcher("sucess.jsp").forward(req,resp);
             }else {
                 req.getSession().setAttribute("user",name);
-                req.setAttribute("flag", "登录成功");
-                req.setAttribute("name", name);
+                req.getSession().setAttribute("flag", "登录成功");
+                req.getSession().setAttribute("name", name);
                 req.getRequestDispatcher("sucess.jsp").forward(req, resp);
             }
         }else if(flag==2){
-            req.setAttribute("flag","账密错误");
+            req.getSession().setAttribute("flag","账密错误");
             req.getRequestDispatcher("sucess.jsp").forward(req,resp);
         }else if(flag==3){
-            req.setAttribute("flag","查无此人");
+            req.getSession().setAttribute("flag","查无此人");
             req.getRequestDispatcher("sucess.jsp").forward(req,resp);
         }
     }
